@@ -1751,7 +1751,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("accordion-card-app/app")["default"].create({"name":"accordion-card-app","version":"0.0.0+de9a53ce"});
+            require("accordion-card-app/app")["default"].create({"name":"accordion-card-app","version":"0.0.0+f1dfeccd"});
           }
         
 //# sourceMappingURL=accordion-card-app.map

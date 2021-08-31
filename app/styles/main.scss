@@ -1,0 +1,60 @@
+html {
+    background: #6462e7;
+}
+
+body {
+    background: rgb(175,104,234);
+    background: linear-gradient(180deg, rgba(175,104,234,1) 0%, rgba(100,98,231,1) 100%);
+    background-repeat: no-repeat;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.acc-card {
+    background: #fff;
+    border-radius: 20px;
+    height: 510px;
+    z-index: 1;
+}
+
+.max-width {
+    max-width:920px;
+    margin: 0px auto;
+    padding: 130px 0px;
+}
+
+.card-image-bg {
+    background: url('../images/bg-pattern-desktop.svg') 100% 67%;
+    height: 510px;
+}
+
+.second-img-bg {
+    background: url('../images/illustration-woman-online-desktop.svg') 100% 50% no-repeat;
+    height: 510px;
+}
+
+.box-img {
+    position: absolute;
+    left: -93px;
+    top: 42%;
+    z-index: 3;
+}
+
+h1 {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.card-padding {
+    padding: 70px 80px;
+}
+
+.no-gutters {
+    padding-left: 0;
+    padding-right: 0;
+}
