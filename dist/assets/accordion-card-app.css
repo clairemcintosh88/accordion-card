@@ -9978,6 +9978,7 @@ h1 {
 p {
   font-size: 14px;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .card-padding {
@@ -9987,6 +9988,32 @@ p {
 .no-gutters {
   padding-left: 0;
   padding-right: 0;
+}
+
+.no-row-gutters {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+/*
+.custom-accordion-panel {
+    display: none;
+    overflow: hidden;
+}*/
+.m-b-5 {
+  margin-bottom: 5px;
+}
+
+.p-t-20 {
+  padding-top: 20px;
 }
 
 /*# sourceMappingURL=accordion-card-app.css.map */

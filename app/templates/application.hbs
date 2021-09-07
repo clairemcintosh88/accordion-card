@@ -1,8 +1,8 @@
 {{page-title "AccordionCardApp"}}
 <div class="container-fluid max-width">
-   <div class="row align-items-center">
-        <div class="col acc-card">
-            <div class="row">
+   <div class="row align-items-center no-row-gutters">
+        <div class="col no-gutters acc-card">
+            <div class="row no-row-gutters">
                 <div class="col-5 card-image-bg no-gutters">
                     <div class="second-img-bg">
                      <img src="{{rootURL}}/images/illustration-box-desktop.svg" class="box-img" />
@@ -10,26 +10,43 @@
                     </div>
                 </div>
                 <div class="col-7 card-padding">
-                    <h1>FAQ</h1>
+                    <div class="row">
+                        <div class="col-md-12 no-gutters">
+                            <h1>FAQ</h1>
+                        </div>
+                    </div>
 
-                    <p>How many team members can I invite?</p>
-                    <p>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+                    <AccordionLink
+                        @title="How many team members can I invite?"
+                        @sub-text="You can invite up to 2 additional users on the Free plan. There is no limit on 
+  team members for the Premium plan."
+                        @id="link1"
+                    />
 
+                    <AccordionLink
+                        @title="What is the maximum file upload size?"
+                        @sub-text="No more than 2GB. All files in your account must fit your allotted storage space."
+                        @id="link2"
+                    />
 
-                    <p>What is the maximum file upload size?</p>
-                    <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
+                    <AccordionLink
+                        @title="How do I reset my password?"
+                        @sub-text="Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you."
+                        @id="link3"
+                    />
 
+                    <AccordionLink
+                        @title="Can I cancel my subscription?"
+                        @sub-text="Yes! Send us a message and we’ll process your request no questions asked."
+                        @id="link4"
+                    />
+                    
+                    <AccordionLink
+                        @title="Do you provide additional support?"
+                        @sub-text="Chat and email support is available 24/7. Phone lines are open during normal business hours."
+                        @id="link5"
+                    />
 
-                    <p>How do I reset my password?</p>
-                    <p>Click “Forgot password” from the login page or “Change password” from your profile page.</p>
-                    <p>A reset link will be emailed to you.</p>
-
-
-                    <p>Can I cancel my subscription?</p>
-                    <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
-
-                    <p>Do you provide additional support?</p>
-                    <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
                 </div>
             </div>
         </div>
