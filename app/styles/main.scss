@@ -12,7 +12,7 @@ body {
 .acc-card {
     background: #fff;
     border-radius: 20px;
-    height: 510px;
+    min-height: 510px;
     z-index: 1;
 }
 
@@ -29,7 +29,7 @@ body {
 
 .second-img-bg {
     background: url('../images/illustration-woman-online-desktop.svg') 100% 50% no-repeat;
-    height: 510px;
+    min-height: 510px;
 }
 
 .box-img {
@@ -73,8 +73,31 @@ p {
     border-bottom: 1px solid #e8e8e8;
 }
 
-/*
-.custom-accordion-panel {
-    display: none;
-    overflow: hidden;
-}*/
+
+
+  /* Style the buttons that are used to open and close the accordion panel */
+.customAccordion {
+    background: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 0px 0px 20px 0px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .customAccordion:hover {
+   
+  }
+  
+  /* Style the accordion panel. Note: hidden by default */
+  .panel {
+    padding: 0px 0px 20px 0px;
+    background-color: transparent;
+    /*display: none;
+    overflow: hidden;*/
+    transition: max-height 0.2s ease-out;
+  }

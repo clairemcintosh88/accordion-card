@@ -84,7 +84,7 @@
 
   _exports.default = _default;
 });
-;define("accordion-card-app/components/accordion-link", ["exports", "@ember/component", "@ember/template-factory"], function (_exports, _component, _templateFactory) {
+;define("accordion-card-app/components/accordion-link", ["exports", "@ember/component", "@ember/template-factory", "@ember/object"], function (_exports, _component, _templateFactory, _object) {
   "use strict";
 
   Object.defineProperty(_exports, "__esModule", {
@@ -92,33 +92,49 @@
   });
   _exports.default = void 0;
 
+  var _obj;
+
+  function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) { var desc = {}; Object.keys(descriptor).forEach(function (key) { desc[key] = descriptor[key]; }); desc.enumerable = !!desc.enumerable; desc.configurable = !!desc.configurable; if ('value' in desc || desc.initializer) { desc.writable = true; } desc = decorators.slice().reverse().reduce(function (desc, decorator) { return decorator(target, property, desc) || desc; }, desc); if (context && desc.initializer !== void 0) { desc.value = desc.initializer ? desc.initializer.call(context) : void 0; desc.initializer = undefined; } if (desc.initializer === void 0) { Object.defineProperty(target, property, desc); desc = null; } return desc; }
+
   const __COLOCATED_TEMPLATE__ = (0, _templateFactory.createTemplateFactory)(
   /*
     <div class="row">
       <div class="col-md-12 no-gutters border-bottom p-t-20">
           <div class="row custom-accordion">
               <div class="col-md-12">
-                  <a {{action}}>
-                      <p>{{@title}} <span class="float-right"><img src="images/icon-arrow-down.svg" alt="Down arrow" /></span></p>
-                  </a>
-              </div>
-          </div>
-          <div class="row custom-accordion-panel">
-              <div class="col-md-12" id={{@id}}>
-                  <p>{{@sub-text}}</p>
+                  <button class="customAccordion"  {{action 'toggle'}}>{{@title}} <span class="float-right"><img src="images/icon-arrow-down.svg" alt="Down arrow" /></span></button>
+  
+                  {{#if panelOpen}}
+                  <div class="panel">
+                      <p>{{@sub-text}}</p>
+                  </div>
+                  {{/if}}
+                 
               </div>
           </div>
       </div>
   </div>
+  
+  
+  
   */
   {
-    "id": "JgG495KB",
-    "block": "[[[10,0],[14,0,\"row\"],[12],[1,\"\\n    \"],[10,0],[14,0,\"col-md-12 no-gutters border-bottom p-t-20\"],[12],[1,\"\\n        \"],[10,0],[14,0,\"row custom-accordion\"],[12],[1,\"\\n            \"],[10,0],[14,0,\"col-md-12\"],[12],[1,\"\\n                \"],[11,3],[4,[38,0],[[30,0]],null],[12],[1,\"\\n                    \"],[10,2],[12],[1,[30,1]],[1,\" \"],[10,1],[14,0,\"float-right\"],[12],[10,\"img\"],[14,\"src\",\"images/icon-arrow-down.svg\"],[14,\"alt\",\"Down arrow\"],[12],[13],[13],[13],[1,\"\\n                \"],[13],[1,\"\\n            \"],[13],[1,\"\\n        \"],[13],[1,\"\\n        \"],[10,0],[14,0,\"row custom-accordion-panel\"],[12],[1,\"\\n            \"],[10,0],[14,0,\"col-md-12\"],[15,1,[30,2]],[12],[1,\"\\n                \"],[10,2],[12],[1,[30,3]],[13],[1,\"\\n            \"],[13],[1,\"\\n        \"],[13],[1,\"\\n    \"],[13],[1,\"\\n\"],[13]],[\"@title\",\"@id\",\"@sub-text\"],false,[\"action\"]]",
+    "id": "2uXOMHXx",
+    "block": "[[[10,0],[14,0,\"row\"],[12],[1,\"\\n    \"],[10,0],[14,0,\"col-md-12 no-gutters border-bottom p-t-20\"],[12],[1,\"\\n        \"],[10,0],[14,0,\"row custom-accordion\"],[12],[1,\"\\n            \"],[10,0],[14,0,\"col-md-12\"],[12],[1,\"\\n                \"],[11,\"button\"],[24,0,\"customAccordion\"],[4,[38,0],[[30,0],\"toggle\"],null],[12],[1,[30,1]],[1,\" \"],[10,1],[14,0,\"float-right\"],[12],[10,\"img\"],[14,\"src\",\"images/icon-arrow-down.svg\"],[14,\"alt\",\"Down arrow\"],[12],[13],[13],[13],[1,\"\\n\\n\"],[41,[33,2],[[[1,\"                \"],[10,0],[14,0,\"panel\"],[12],[1,\"\\n                    \"],[10,2],[12],[1,[30,2]],[13],[1,\"\\n                \"],[13],[1,\"\\n\"]],[]],null],[1,\"               \\n            \"],[13],[1,\"\\n        \"],[13],[1,\"\\n    \"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\\n\"]],[\"@title\",\"@sub-text\"],false,[\"action\",\"if\",\"panelOpen\"]]",
     "moduleName": "accordion-card-app/components/accordion-link.hbs",
     "isStrictMode": false
   });
 
-  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, _component.default.extend({}));
+  var _default = (0, _component.setComponentTemplate)(__COLOCATED_TEMPLATE__, _component.default.extend((_obj = {
+    toggle() {
+      let custAcc = document.getElementsByClassName("customAccordion");
+
+      if (custAcc) {
+        this.toggleProperty('panelOpen');
+      }
+    }
+
+  }, (_applyDecoratedDescriptor(_obj, "toggle", [_object.action], Object.getOwnPropertyDescriptor(_obj, "toggle"), _obj)), _obj)));
 
   _exports.default = _default;
 });
@@ -1692,8 +1708,8 @@
   _exports.default = void 0;
 
   var _default = (0, _templateFactory.createTemplateFactory)({
-    "id": "DEyyXHlf",
-    "block": "[[[1,[28,[35,0],[\"AccordionCardApp\"],null]],[1,\"\\n\"],[10,0],[14,0,\"container-fluid max-width\"],[12],[1,\"\\n   \"],[10,0],[14,0,\"row align-items-center no-row-gutters\"],[12],[1,\"\\n        \"],[10,0],[14,0,\"col no-gutters acc-card\"],[12],[1,\"\\n            \"],[10,0],[14,0,\"row no-row-gutters\"],[12],[1,\"\\n                \"],[10,0],[14,0,\"col-5 card-image-bg no-gutters\"],[12],[1,\"\\n                    \"],[10,0],[14,0,\"second-img-bg\"],[12],[1,\"\\n                     \"],[10,\"img\"],[15,\"src\",[29,[[36,1],\"/images/illustration-box-desktop.svg\"]]],[14,0,\"box-img\"],[12],[13],[1,\"\\n                    \\n                    \"],[13],[1,\"\\n                \"],[13],[1,\"\\n                \"],[10,0],[14,0,\"col-7 card-padding\"],[12],[1,\"\\n                    \"],[10,0],[14,0,\"row\"],[12],[1,\"\\n                        \"],[10,0],[14,0,\"col-md-12 no-gutters\"],[12],[1,\"\\n                            \"],[10,\"h1\"],[12],[1,\"FAQ\"],[13],[1,\"\\n                        \"],[13],[1,\"\\n                    \"],[13],[1,\"\\n\\n                    \"],[8,[39,2],null,[[\"@title\",\"@sub-text\",\"@id\",\"@action\"],[\"How many team members can I invite?\",\"You can invite up to 2 additional users on the Free plan. There is no limit on \\n  team members for the Premium plan.\",\"link1\",\"showAccPanel\"]],null],[1,\"\\n\\n                    \"],[8,[39,2],null,[[\"@title\",\"@sub-text\",\"@id\"],[\"What is the maximum file upload size?\",\"No more than 2GB. All files in your account must fit your allotted storage space.\",\"link2\"]],null],[1,\"\\n\\n                    \"],[8,[39,2],null,[[\"@title\",\"@sub-text\",\"@id\"],[\"How do I reset my password?\",\"Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.\",\"link3\"]],null],[1,\"\\n\\n                    \"],[8,[39,2],null,[[\"@title\",\"@sub-text\",\"@id\"],[\"Can I cancel my subscription?\",\"Yes! Send us a message and we’ll process your request no questions asked.\",\"link4\"]],null],[1,\"\\n                    \\n                    \"],[8,[39,2],null,[[\"@title\",\"@sub-text\",\"@id\"],[\"Do you provide additional support?\",\"Chat and email support is available 24/7. Phone lines are open during normal business hours.\",\"link5\"]],null],[1,\"\\n\\n                \"],[13],[1,\"\\n            \"],[13],[1,\"\\n        \"],[13],[1,\"\\n    \"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\"],[46,[28,[37,4],null,null],null,null,null]],[],false,[\"page-title\",\"rootURL\",\"accordion-link\",\"component\",\"-outlet\"]]",
+    "id": "kAKda8zw",
+    "block": "[[[1,[28,[35,0],[\"AccordionCardApp\"],null]],[1,\"\\n\"],[10,0],[14,0,\"container-fluid max-width\"],[12],[1,\"\\n   \"],[10,0],[14,0,\"row align-items-center no-row-gutters\"],[12],[1,\"\\n        \"],[10,0],[14,0,\"col no-gutters acc-card\"],[12],[1,\"\\n            \"],[10,0],[14,0,\"row no-row-gutters\"],[12],[1,\"\\n                \"],[10,0],[14,0,\"col-5 card-image-bg no-gutters\"],[12],[1,\"\\n                    \"],[10,0],[14,0,\"second-img-bg\"],[12],[1,\"\\n                     \"],[10,\"img\"],[15,\"src\",[29,[[36,1],\"/images/illustration-box-desktop.svg\"]]],[14,0,\"box-img\"],[12],[13],[1,\"\\n                    \\n                    \"],[13],[1,\"\\n                \"],[13],[1,\"\\n                \"],[10,0],[14,0,\"col-7 card-padding\"],[12],[1,\"\\n                    \"],[10,0],[14,0,\"row\"],[12],[1,\"\\n                        \"],[10,0],[14,0,\"col-md-12 no-gutters\"],[12],[1,\"\\n                            \"],[10,\"h1\"],[12],[1,\"FAQ\"],[13],[1,\"\\n                        \"],[13],[1,\"\\n                    \"],[13],[1,\"\\n\\n                    \"],[8,[39,2],null,[[\"@title\",\"@sub-text\",\"@id\",\"@action\"],[\"How many team members can I invite?\",\"You can invite up to 2 additional users on the Free plan. There is no limit on \\n  team members for the Premium plan.\",\"link1\",\"showAccPanel\"]],null],[1,\"\\n\\n                    \"],[8,[39,2],null,[[\"@title\",\"@sub-text\",\"@id\"],[\"What is the maximum file upload size?\",\"No more than 2GB. All files in your account must fit your allotted storage space.\",\"link2\"]],null],[1,\"\\n\\n                    \"],[8,[39,2],null,[[\"@title\",\"@sub-text\",\"@id\"],[\"How do I reset my password?\",\"Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.\",\"link3\"]],null],[1,\"\\n\\n                    \"],[8,[39,2],null,[[\"@title\",\"@sub-text\",\"@id\"],[\"Can I cancel my subscription?\",\"Yes! Send us a message and we’ll process your request no questions asked.\",\"link4\"]],null],[1,\"\\n                    \\n                    \"],[8,[39,2],null,[[\"@title\",\"@sub-text\",\"@id\"],[\"Do you provide additional support?\",\"Chat and email support is available 24/7. Phone lines are open during normal business hours.\",\"link5\"]],null],[1,\"\\n\\n                    \\n                \"],[13],[1,\"\\n            \"],[13],[1,\"\\n        \"],[13],[1,\"\\n    \"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\"],[46,[28,[37,4],null,null],null,null,null]],[],false,[\"page-title\",\"rootURL\",\"accordion-link\",\"component\",\"-outlet\"]]",
     "moduleName": "accordion-card-app/templates/application.hbs",
     "isStrictMode": false
   });
@@ -1801,7 +1817,7 @@ catch(err) {
 
 ;
           if (!runningTests) {
-            require("accordion-card-app/app")["default"].create({"name":"accordion-card-app","version":"0.0.0+7f2dce8d"});
+            require("accordion-card-app/app")["default"].create({"name":"accordion-card-app","version":"0.0.0+c531d852"});
           }
         
 //# sourceMappingURL=accordion-card-app.map

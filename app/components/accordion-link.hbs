@@ -2,15 +2,17 @@
     <div class="col-md-12 no-gutters border-bottom p-t-20">
         <div class="row custom-accordion">
             <div class="col-md-12">
-                <a {{action}}>
-                    <p>{{@title}} <span class="float-right"><img src="images/icon-arrow-down.svg" alt="Down arrow" /></span></p>
-                </a>
-            </div>
-        </div>
-        <div class="row custom-accordion-panel">
-            <div class="col-md-12" id={{@id}}>
-                <p>{{@sub-text}}</p>
+                <button class="customAccordion"  {{action 'toggle'}}>{{@title}} <span class="float-right"><img src="images/icon-arrow-down.svg" alt="Down arrow" /></span></button>
+
+                {{#if panelOpen}}
+                <div class="panel">
+                    <p>{{@sub-text}}</p>
+                </div>
+                {{/if}}
+               
             </div>
         </div>
     </div>
 </div>
+
+
