@@ -102,7 +102,7 @@
       <div class="col-md-12 no-gutters border-bottom p-t-20">
           <div class="row custom-accordion">
               <div class="col-md-12">
-                  <button class="customAccordion"  {{action 'toggle'}}>{{@title}} <span class="float-right {{if panelOpen 'acc-panel-active'}}"><img src="images/icon-arrow-down.svg" alt="Down arrow" /></span></button>
+                  <button class="customAccordion {{if panelOpen 'bold'}}"  {{action 'toggle'}}>{{@title}} <span class="float-right {{if panelOpen 'acc-panel-active'}}"><img src="images/icon-arrow-down.svg" alt="Down arrow" /></span></button>
   
                   {{#if panelOpen}}
                   <div class="panel">
@@ -119,8 +119,8 @@
   
   */
   {
-    "id": "a3Bpermd",
-    "block": "[[[10,0],[14,0,\"row\"],[12],[1,\"\\n    \"],[10,0],[14,0,\"col-md-12 no-gutters border-bottom p-t-20\"],[12],[1,\"\\n        \"],[10,0],[14,0,\"row custom-accordion\"],[12],[1,\"\\n            \"],[10,0],[14,0,\"col-md-12\"],[12],[1,\"\\n                \"],[11,\"button\"],[24,0,\"customAccordion\"],[4,[38,0],[[30,0],\"toggle\"],null],[12],[1,[30,1]],[1,\" \"],[10,1],[15,0,[29,[\"float-right \",[52,[33,2],\"acc-panel-active\"]]]],[12],[10,\"img\"],[14,\"src\",\"images/icon-arrow-down.svg\"],[14,\"alt\",\"Down arrow\"],[12],[13],[13],[13],[1,\"\\n\\n\"],[41,[33,2],[[[1,\"                \"],[10,0],[14,0,\"panel\"],[12],[1,\"\\n                    \"],[10,2],[12],[1,[30,2]],[13],[1,\"\\n                \"],[13],[1,\"\\n\"]],[]],null],[1,\"               \\n            \"],[13],[1,\"\\n        \"],[13],[1,\"\\n    \"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\\n\"]],[\"@title\",\"@sub-text\"],false,[\"action\",\"if\",\"panelOpen\"]]",
+    "id": "l7ET94OQ",
+    "block": "[[[10,0],[14,0,\"row\"],[12],[1,\"\\n    \"],[10,0],[14,0,\"col-md-12 no-gutters border-bottom p-t-20\"],[12],[1,\"\\n        \"],[10,0],[14,0,\"row custom-accordion\"],[12],[1,\"\\n            \"],[10,0],[14,0,\"col-md-12\"],[12],[1,\"\\n                \"],[11,\"button\"],[16,0,[29,[\"customAccordion \",[52,[33,1],\"bold\"]]]],[4,[38,2],[[30,0],\"toggle\"],null],[12],[1,[30,1]],[1,\" \"],[10,1],[15,0,[29,[\"float-right \",[52,[33,1],\"acc-panel-active\"]]]],[12],[10,\"img\"],[14,\"src\",\"images/icon-arrow-down.svg\"],[14,\"alt\",\"Down arrow\"],[12],[13],[13],[13],[1,\"\\n\\n\"],[41,[33,1],[[[1,\"                \"],[10,0],[14,0,\"panel\"],[12],[1,\"\\n                    \"],[10,2],[12],[1,[30,2]],[13],[1,\"\\n                \"],[13],[1,\"\\n\"]],[]],null],[1,\"               \\n            \"],[13],[1,\"\\n        \"],[13],[1,\"\\n    \"],[13],[1,\"\\n\"],[13],[1,\"\\n\\n\\n\"]],[\"@title\",\"@sub-text\"],false,[\"if\",\"panelOpen\",\"action\"]]",
     "moduleName": "accordion-card-app/components/accordion-link.hbs",
     "isStrictMode": false
   });

@@ -2,7 +2,7 @@
     <div class="col-md-12 no-gutters border-bottom p-t-20">
         <div class="row custom-accordion">
             <div class="col-md-12">
-                <button class="customAccordion"  {{action 'toggle'}}>{{@title}} <span class="float-right {{if panelOpen 'acc-panel-active'}}"><img src="images/icon-arrow-down.svg" alt="Down arrow" /></span></button>
+                <button class="customAccordion {{if panelOpen 'bold'}}"  {{action 'toggle'}}>{{@title}} <span class="float-right {{if panelOpen 'acc-panel-active'}}"><img src="images/icon-arrow-down.svg" alt="Down arrow" /></span></button>
 
                 {{#if panelOpen}}
                 <div class="panel">
