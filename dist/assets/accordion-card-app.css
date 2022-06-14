@@ -9954,7 +9954,7 @@ body {
 
 .card-image-bg {
   background: url("../images/bg-pattern-desktop.svg") 100% 67%;
-  height: 510px;
+  min-height: 510px;
 }
 
 .second-img-bg {
@@ -9965,7 +9965,7 @@ body {
 .box-img {
   position: absolute;
   left: -93px;
-  top: 42%;
+  top: 200px;
   z-index: 3;
 }
 
@@ -10024,6 +10024,10 @@ p {
   /*display: none;
   overflow: hidden;*/
   transition: max-height 0.2s ease-out;
+}
+
+.acc-panel-active {
+  transform: rotate(180deg);
 }
 
 .m-b-5 {
